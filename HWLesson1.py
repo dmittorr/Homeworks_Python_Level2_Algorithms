@@ -27,7 +27,6 @@
 # (или “Вы угадали”, или “Попытки закончились”).
 
 # 1.
-
 num = input("Input 3-digit number: ")
 summa = 0
 multiplication = 1
@@ -35,3 +34,14 @@ for i in num:
     summa += int(i)
     multiplication = multiplication * int(i)
 print(summa, multiplication)
+
+# 2.
+number1 = 5
+number2 = 6
+print(bin(number1), bin(number2))
+print(bin(number1 & number2))
+print(bin(number1 | number2))
+print(bin(number1 ^ number2))
+
+print(number1 >> 2)
+print(number1 << 2)
