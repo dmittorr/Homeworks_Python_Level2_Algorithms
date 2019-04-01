@@ -64,12 +64,13 @@ while check_quit:
             print("Неверная операция")
         elif action == "0":
             check_quit = False
+            print("Работа программы завершена")
             break
         else:
-            a = input("Введите Первое число - ")
-            b = input("Введите Второе число - ")
+            a = int(input("Введите Первое число - "))
+            b = int(input("Введите Второе число - "))
             if action == "/" and b == 0:
-                wrong_b = True
+                wrong_b = True0
 
                 while wrong_b:
                     print("При операции деления знаменатель не может быть равен 0")
