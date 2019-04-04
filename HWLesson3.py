@@ -166,7 +166,7 @@ matrix = []
 for i in range(4):
     row = []
     for j in range(4):
-        x = int(input("Введите число " + str((4 * i  + j + 1)) + " - "))
+        x = int(input("Введите число " + str((4 * i + j + 1)) + " - "))
         row.append(x)
     row.append((sum(row)))
     # print(row)
@@ -179,4 +179,10 @@ print(matrix[3])
 
 # ---------------------------------------------------------------------------------------------------
 # 9. Найти максимальный элемент среди минимальных элементов столбцов матрицы.
+min_column = []
+
+for i in range(4):
+    min_current_column = min(matrix[i])
+    min_column.append(min_current_column)
+print(max(min_column))
 
