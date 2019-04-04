@@ -63,38 +63,54 @@ from random import randint
 
 # ---------------------------------------------------------------------------------------------------
 # 4. Определить, какое число в массиве встречается чаще всего.
-from random import randint
-
-d = []
-# Делаем случайный массив с возможно повторяющимися членами
-for i in range(1, 101):
-    d.append(randint(1, 100))
-print(d)
-
-c = sorted(d)
-print(c)
-
-c_max = c[0]
-c_current = c[0]
-icur = 1
-imax = 1
-nmax = 0
-for i in range(1, len(c)-1):
-    if c[i] == c_current:
-        icur += 1
-        if icur > imax:
-            imax += 1
-            nmax = i
-            c_max = c[i]
-    else:
-        c_current = c[i]
-        icur = 1
-print(c_max, imax)
+# from random import randint
+#
+# d = []
+# # Делаем случайный массив с возможно повторяющимися членами
+# for i in range(1, 101):
+#     d.append(randint(1, 100))
+# print(d)
+#
+# c = sorted(d)
+# print(c)
+#
+# c_max = c[0]
+# c_current = c[0]
+# icur = 1
+# imax = 1
+# nmax = 0
+# for i in range(1, len(c)-1):
+#     if c[i] == c_current:
+#         icur += 1
+#         if icur > imax:
+#             imax += 1
+#             nmax = i
+#             c_max = c[i]
+#     else:
+#         c_current = c[i]
+#         icur = 1
+# print(c_max, imax)
 
 
 # ---------------------------------------------------------------------------------------------------
 # 5. В массиве найти максимальный отрицательный элемент. Вывести на экран его значение и позицию (индекс)
 # в массиве.
+
+
+from random import randint
+
+d = []
+# Делаем случайный массив с возможно повторяющимися членами
+for i in range(1, 101):
+    d.append(randint(-100, 100))
+print(d)
+c = sorted(d)
+print(c)
+d_max_negative = c[0]
+for x in d:
+    if x == d_max_negative:
+        print(x, d.index(x))
+
 # 6. В одномерном массиве найти сумму элементов, находящихся между минимальным и максимальным элементами.
 # Сами минимальный и максимальный элементы в сумму не включать.
 # 7. В одномерном массиве целых чисел определить два наименьших элемента.
