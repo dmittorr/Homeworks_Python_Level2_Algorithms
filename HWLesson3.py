@@ -143,21 +143,40 @@ from random import randint
 # Они могут быть как равны между собой (оба являться минимальными), так и различаться.
 from random import randint
 
-# Делаем случайный массив с возможно повторяющимися членами
-d = [randint(1, 500) for i in range(100)]
-print(d)
-
-d_min1 = min(d)
-d.pop(d.index(d_min1))
-if d_min1 in d:
-    print("Double min")
-d_min2 = min(d)
-
-print(d_min1, d_min2)
+# # Делаем случайный массив с возможно повторяющимися членами
+# d = [randint(1, 500) for i in range(100)]
+# print(d)
+# print(len(set(d)))
+#
+# d_min1 = min(d)
+# d.pop(d.index(d_min1))
+# if d_min1 in d:
+#     print("Double min")
+# d_min2 = min(d)
+#
+# print(d_min1, d_min2)
 
 
 # 8. Матрица 5x4 заполняется вводом с клавиатуры кроме последних элементов строк.
 # Программа должна вычислять сумму введенных элементов каждой строки и записывать ее
 # в последнюю ячейку строки. В конце следует вывести полученную матрицу.
+
+matrix = []
+
+for i in range(4):
+    row = []
+    for j in range(4):
+        x = int(input("Введите число " + str((4 * i  + j + 1)) + " - "))
+        row.append(x)
+    row.append((sum(row)))
+    # print(row)
+    matrix.append(row)
+print(matrix[0])
+print(matrix[1])
+print(matrix[2])
+print(matrix[3])
+
+
+# ---------------------------------------------------------------------------------------------------
 # 9. Найти максимальный элемент среди минимальных элементов столбцов матрицы.
 
