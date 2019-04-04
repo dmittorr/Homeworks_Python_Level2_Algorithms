@@ -97,24 +97,65 @@ from random import randint
 # в массиве.
 
 
-from random import randint
+# from random import randint
+#
+# d = []
+# # Делаем случайный массив с возможно повторяющимися членами
+# for i in range(1, 101):
+#     d.append(randint(-100, 100))
+# print(d)
+# c = sorted(d)
+# print(c)
+# d_max_negative = c[0]
+# for x in d:
+#     if x == d_max_negative:
+#         print(x, d.index(x))
 
-d = []
-# Делаем случайный массив с возможно повторяющимися членами
-for i in range(1, 101):
-    d.append(randint(-100, 100))
-print(d)
-c = sorted(d)
-print(c)
-d_max_negative = c[0]
-for x in d:
-    if x == d_max_negative:
-        print(x, d.index(x))
-
+# ---------------------------------------------------------------------------------------------------
 # 6. В одномерном массиве найти сумму элементов, находящихся между минимальным и максимальным элементами.
 # Сами минимальный и максимальный элементы в сумму не включать.
+
+# from random import randint
+#
+# # Делаем случайный массив с возможно повторяющимися членами
+# d = [randint(1, 500) for i in range(100)]
+# print(d)
+# # c = sorted(d)
+# d_min = min(d)
+# d_max = max(d)
+# sum_d = 0
+# if d.index(d_min) < d.index(d_max):
+#     sum_d = sum(d[d.index(d_min)+1: d.index(d_max)])
+# else:
+#     sum_d = sum(d[d.index(d_max)+1: d.index(d_min)])
+# # for i in range(0, 100):
+# #     if i = d_max or d[i] == d_min:
+# #         pass
+# #     else:
+# #         sum_d += d[i]
+# print(sum_d, sum(d))
+# print(d_max, d.index(d_max))
+# print(d_min, d.index(d_min))
+
+
+# ---------------------------------------------------------------------------------------------------
 # 7. В одномерном массиве целых чисел определить два наименьших элемента.
 # Они могут быть как равны между собой (оба являться минимальными), так и различаться.
+from random import randint
+
+# Делаем случайный массив с возможно повторяющимися членами
+d = [randint(1, 500) for i in range(100)]
+print(d)
+
+d_min1 = min(d)
+d.pop(d.index(d_min1))
+if d_min1 in d:
+    print("Double min")
+d_min2 = min(d)
+
+print(d_min1, d_min2)
+
+
 # 8. Матрица 5x4 заполняется вводом с клавиатуры кроме последних элементов строк.
 # Программа должна вычислять сумму введенных элементов каждой строки и записывать ее
 # в последнюю ячейку строки. В конце следует вывести полученную матрицу.
